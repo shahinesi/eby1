@@ -6,12 +6,10 @@
     function get_page($url){
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$url);
-        /*
-        $proxy = 'http://proxy.company.com:8080';
-        $proxyauth = 'domain\proxy_username:proxy_password';
+        
+        $proxy = 'http://tor.dastpour.ge:3128';
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
-        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-        */
+        
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);
